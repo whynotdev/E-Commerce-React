@@ -1,36 +1,32 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../SignUp/SignUp.css';
+import InputController from '../Input/InputController';
+import { Link } from 'react-router-dom';
 
 function SignUp() {
   return (
-    <div className="container mt-5 ">
-      <div className="card ">
-        <div className="card-body">
-          <h1 className="card-title mb-4">Sign Up</h1>
-          <form>
-            <div className="mb-3">
-              <label htmlFor="exampleInputUsername" className="form-label">Username</label>
-              <input type="text" className="form-control" id="exampleInputUsername" placeholder="Enter username" />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="exampleInputEmail" className="form-label">Email address</label>
-              <input type="email" className="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter email" />
-              <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div className="mb-3">
-              <label htmlFor="exampleInputPassword" className="form-label">Password</label>
-              <input type="password" className="form-control" id="exampleInputPassword" placeholder="Password" />
-            </div>
-            <div className="mb-3 form-check">
-              <input type="checkbox" className="form-check-input" id="exampleCheck" />
-              <label className="form-check-label" htmlFor="exampleCheck">Check me out</label>
-            </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
-          </form>
-        </div>
-      </div>
-      <p className="mt-3">Already have an account? <a href="/Login">Login</a></p>
+  <> <div className='container'>
+  <div className='innerCard'>
+    <h1 className='heading text-warning'>SignUp</h1>
+    <InputController label="Name" placeholder="Enter Fullname" />
+    <InputController label="Email" placeholder="Enter Email " />
+    <InputController label="Password" placeholder="Enter Password" />
+    
+
+    <div className='footer'>
+      <button>Login</button>
+      <p>
+       Already have an account?{" "}
+        <span>
+          <Link to="/Login">Login</Link>
+        </span>
+      </p>
     </div>
+  </div>
+</div>
+ 
+  </>
   );
 }
 
