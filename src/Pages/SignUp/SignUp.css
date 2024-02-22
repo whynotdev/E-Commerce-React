@@ -1,60 +1,76 @@
-body{
-    background-color: rgb(247, 233, 89);
+body, html {
+  height: 100%;
+  margin: 0;
 }
-.container{
-    height: 100%;
-    min-height: 100vh;
-    width: 100%;
- 
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .innerCard{
-    min-width: 480px;
-    height: fit-content;
-    width: fit-content;
-    background-color: aliceblue;
-    box-shadow: 1px 1px 4px rgb(0, 0, 0,0.2);
-    padding: 30px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
 
-  }
-  .footer{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .footer button{
-    outline: none;
-    border: none;
-    background-color: rgb(198, 177, 216);
-    color: rgb(66, 63, 63);
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding: 10px 16px;
-    width: 100%;
-    text-align: center;
+.container {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f1d36e !important; Light amber background */
+}
 
-  }
-  .footer button:hover{
-    color: white;
-    background-color:blueviolet ;
-  }
-  .footer p{
-    font-weight: 700;
-    color: #000;
-  }
-  .footer p span{
-    font-weight: bold;
-    color: rgb(155, 65, 239);
-    letter-spacing: 1px;
-  
-    text-decoration: none;
+.innerCard {
+  min-width: 480px;
+  height: fit-content;
+  width: fit-content;
+  background-color: #f1d36e !important; /* Light amber background */
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
-  }
- 
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer button {
+  outline: none;
+  border: none;
+  background-color: #050506 !important;
+  color: white !important;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px 16px;
+  width: 100%;
+  text-align: center;
+}
+
+.footer button:hover {
+  color: white;
+  background-color: #5463ed !important;
+}
+
+.footer p {
+  font-weight: 700;
+  color: #000;
+}
+
+.footer p span {
+  font-weight: bold;
+  color: #f0ecf3;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.footer .error {
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ec0c0c;
+  font-size: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.footer button:disabled {
+  background-color: gray !important;
+}
