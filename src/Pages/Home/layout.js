@@ -1,4 +1,3 @@
-// Layout.jsx
 
 import React, { useState } from 'react';
 import { Outlet, Link, useNavigate } from 'react-router-dom';
@@ -11,18 +10,13 @@ export const Layout = ({ size }) => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Function to handle the logout
+  
   const handleLogout = () => {
-    // You can add any additional cleanup or operations before logout if needed
-    // ...
-
-    // Perform logout
     navigate('/Logout');
   };
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Navigate to the search page with the search query
     navigate(`/search/${searchQuery}`);
   };
 
@@ -47,11 +41,11 @@ export const Layout = ({ size }) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" to="/Home">
+                <Link className="nav-link active navtext" to="/Home">
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/Login">
                   Login
                 </Link>
@@ -86,7 +80,7 @@ export const Layout = ({ size }) => {
                     </Link>
                   </li>
                 </ul>
-              </li>
+              </li> */}
             </ul>
             <form className="mx-auto d-flex justify-content-center" onSubmit={handleSearch}>
               <input
@@ -97,7 +91,7 @@ export const Layout = ({ size }) => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-dark navtext" type="submit">
                 Search
               </button>
             </form>
@@ -107,9 +101,10 @@ export const Layout = ({ size }) => {
                 <span style={{ fontSize: "40px" }}>{size}</span>
               </Link>
             </div>
+
             {/* Logout button */}
             <button
-              className="btn btn-outline-dark ms-auto"
+              className="btn btn-outline-dark ms-auto navtext"
               onClick={handleLogout}
             >
               <FontAwesomeIcon icon={faSignOutAlt} /> Logout

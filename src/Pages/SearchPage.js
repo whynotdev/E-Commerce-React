@@ -14,8 +14,7 @@ const SearchPage = () => {
         const filteredProducts = allProducts.filter((product) => {
           const { title, description, category, price } = product;
           const lowerCasedQuery = query.toLowerCase();
-
-          // Check if the query matches strically with all product properties
+          
           return (
             title.toLowerCase() == lowerCasedQuery ||
             description.toLowerCase() == lowerCasedQuery ||
